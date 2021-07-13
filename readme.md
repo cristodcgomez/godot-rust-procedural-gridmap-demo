@@ -22,6 +22,14 @@ In the current version of Godot (3.3.x) there is some issues related to physics 
 
 Hell yeah.
 
+# How to use it
+- Clone this repo
+- Setup Rust according your desired method (I prefer rustup)
+- Open a terminal in the folder of the repo and use the following commands:
+- `cargo clean`, `cargo build --release`
+- Once build finishes, open the project in godot (root folder of the repo)
+- Press "Play" and is ready :)
+
 
 _Please if you want to use this code, take in mind GPLV3 license. As well, using this code/assets for make OC of any type MUST include a link to this repo, and mention to myself with my website (https://cristodcgomez.dev)_
 
