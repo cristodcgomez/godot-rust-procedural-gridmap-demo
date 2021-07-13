@@ -7,7 +7,7 @@ This repo contains a sample Godot game using GDNative integration with Rust lang
 
 # Why
 
-This is my first approach to start a path as #GameDev (The first in a lot of years... I have some background experience making custom Hack-roms for SNES emulator, Old CS 1.6 maps and some experiments with Unreal Engine and Unity). So I decided that I want to make videogames using Open Source Software and also start making actuve use of Rust language.
+This is my first approach to start a path as #GameDev (The first in a lot of years... I have some background experience making custom Hack-roms for SNES emulator, Old CS 1.6 maps and some experiments with Unreal Engine and Unity). So I decided that I want to make videogames using Open Source Software and also start making active use of Rust language.
 
 # Does it make sense make a procedural world with Tilemaps?
 
@@ -29,6 +29,10 @@ Hell yeah.
 - `cargo clean`, `cargo build --release`
 - Once build finishes, open the project in godot (root folder of the repo)
 - Press "Play" and is ready :)
+
+# There is an issue in...
+
+Well, you might find some issues in the code, but for learning purposes it should be working fine. If you are not able to start it, open a ticket and I'll try to help you!
 
 
 _Please if you want to use this code, take in mind GPLV3 license. As well, using this code/assets for make OC of any type MUST include a link to this repo, and mention to myself with my website (https://cristodcgomez.dev)_
