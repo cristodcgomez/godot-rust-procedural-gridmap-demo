@@ -1,0 +1,16 @@
+[package]
+name = "godot_rust_demo"
+version = "0.1.0"
+authors = ["Cristopher Caamana <cristodcgomez@e.email>"]
+edition = "2018"
+
+
+[dependencies]
+gdnative = "0.9.3"
+getrandom = { version = "0.2", features = ["js"] }
+rand = "0.8.4"
+interpolation = "0.2.0"
+euclid = "*"
+
+[lib]
+crate-type = ["cdylib"]

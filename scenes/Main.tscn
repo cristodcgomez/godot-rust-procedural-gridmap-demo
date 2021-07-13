@@ -1,0 +1,47 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/Player.gdns" type="Script" id=1]
+[ext_resource path="res://scripts/GridMap.gdns" type="Script" id=2]
+[ext_resource path="res://gdnative_demo_library.gdnlib" type="GDNativeLibrary" id=3]
+[ext_resource path="res://entities/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://assets/camera.tres" type="Environment" id=5]
+[ext_resource path="res://tiles/ground.tres" type="MeshLibrary" id=6]
+
+[sub_resource type="NativeScript" id=1]
+resource_name = "GRDemo"
+class_name = "GRDemo"
+library = ExtResource( 3 )
+
+[node name="GameWorld" type="Node"]
+script = SubResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 5 )
+
+[node name="GridMap" type="GridMap" parent="."]
+process_priority = 2
+mesh_library = ExtResource( 6 )
+use_in_baked_light = true
+cell_octant_size = 1
+cell_center_x = false
+cell_center_y = false
+cell_center_z = false
+data = {
+"cells": PoolIntArray( 131071, 65533, -1073741818 )
+}
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_clip_": 0,
+"_editor_floor_": Vector3( 0, 1, 0 )
+}
+
+[node name="Timer" type="Timer" parent="GridMap"]
+autostart = true
+
+[node name="Player" parent="." instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0 )
+script = ExtResource( 1 )
+
+[connection signal="timeout" from="GridMap/Timer" to="GridMap" method="_on_timeout"]
+
+[editable path="Player"]

@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/Button.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 0.997
+margin_right = 4.0
+margin_bottom = -0.200012
+color = Color( 0.0980392, 0.0901961, 0.0823529, 1 )
+
+[node name="Button" type="Button" parent="."]
+anchor_left = 0.426
+anchor_top = 0.438
+anchor_right = 0.578
+anchor_bottom = 0.525
+margin_left = 1.71323
+margin_top = 1.20389
+margin_right = 1.06525
+margin_bottom = 1.00388
+text = "START"
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = -1.18915
+margin_top = 2.37842
+margin_right = 1020.81
+margin_bottom = 187.378
+text = "Rust + Godot Test"
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Button" to="Button" method="_on_Button_pressed"]
